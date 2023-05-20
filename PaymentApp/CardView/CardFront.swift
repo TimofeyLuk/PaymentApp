@@ -1,5 +1,5 @@
 //
-//  CartFront.swift
+//  CardFront.swift
 //  PaymentApp
 //
 //  Created by Тимофей Лукашевич on 20.05.23.
@@ -7,25 +7,25 @@
 
 import SwiftUI
 
-struct CartFront: View {
+struct CardFront: View {
     
-    @ObservedObject var viewModel: CartViewModel
+    @ObservedObject var viewModel: CardViewModel
     
     var body: some View {
         GeometryReader { proxy in
             VStack(alignment: .leading) {
                 Spacer(minLength: proxy.size.height / 2.5)
-                field("Cart Number", text: $viewModel.model.number, formater: CartNumberFormater())
+                field("Card Number", text: $viewModel.model.number, formater: CardNumberFormater())
                     .keyboardType(.numberPad)
                 HStack {
-                    field("MM/YY", text: $viewModel.model.expireDate, formater: CartExpireDateFormater())
+                    field("MM/YY", text: $viewModel.model.expireDate, formater: CardExpireDateFormater())
                         .multilineTextAlignment(.center)
                         .keyboardType(.numberPad)
                         .frame(width: proxy.size.width / 4)
                     Spacer()
                 }
                     
-                field("NAME SURNAME", text: $viewModel.model.holdername, formater: CartHolderFormater())
+                field("NAME SURNAME", text: $viewModel.model.holdername, formater: CardHolderFormater())
                 Spacer()
             }
             .padding(.horizontal)
@@ -49,9 +49,9 @@ struct CartFront: View {
     
 }
 
-struct CartFront_Previews: PreviewProvider {
+struct CardFront_Previews: PreviewProvider {
     static var previews: some View {
-        CartFront(viewModel: CartViewModel())
+        CardFront(viewModel: CardViewModel())
             .background(.blue)
             .frame(width: 350, height: 230)
     }

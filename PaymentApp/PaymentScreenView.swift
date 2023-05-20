@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  PaymentScreenView.swift
 //  PaymentApp
 //
 //  Created by Тимофей Лукашевич on 20.05.23.
@@ -7,17 +7,17 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct PaymentScreenView: View {
     
-    let cartViewModel = CartViewModel()
+    let cardViewModel = CardViewModel()
     
     var body: some View {
-        CartView(viewModel: cartViewModel)
+        CardView(viewModel: cardViewModel)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        PaymentScreenView()
     }
 }

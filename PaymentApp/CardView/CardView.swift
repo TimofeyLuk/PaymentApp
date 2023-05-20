@@ -1,5 +1,5 @@
 //
-//  CartView.swift
+//  CardView.swift
 //  PaymentApp
 //
 //  Created by Тимофей Лукашевич on 20.05.23.
@@ -7,26 +7,26 @@
 
 import SwiftUI
 
-struct CartView: View {
+struct CardView: View {
     
-    @ObservedObject var viewModel: CartViewModel
+    @ObservedObject var viewModel: CardViewModel
     
-    @State private var isCartFrontShown = true
+    @State private var isCardFrontShown = true
     @State private var degrees = 0.0
     
     var body: some View {
         VStack {
             Spacer()
             
-            cartView
+            cardView
             
             Button {
                 withAnimation {
-                    isCartFrontShown.toggle()
+                    isCardFrontShown.toggle()
                     degrees += 180
                 }
             } label: {
-                Text(isCartFrontShown ? "Next" : "Back")
+                Text(isCardFrontShown ? "Next" : "Back")
             }
             .padding(.top, 30)
 
@@ -34,17 +34,17 @@ struct CartView: View {
         }
     }
     
-    var cartView: some View {
+    var cardView: some View {
         ZStack {
             LinearGradient(
                 gradient: Gradient(colors: [.red, .blue]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
-            if isCartFrontShown {
-                CartFront(viewModel: viewModel)
+            if isCardFrontShown {
+                CardFront(viewModel: viewModel)
             } else {
-                CartBack(viewModel: viewModel)
+                CardBack(viewModel: viewModel)
                     .rotation3DEffect( .degrees(180),
                                        axis: (x: 0, y: 1, z: 0))
             }
@@ -57,8 +57,8 @@ struct CartView: View {
     
 }
 
-struct CartView_Previews: PreviewProvider {
+struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CartView(viewModel: CartViewModel())
+        CardView(viewModel: CardViewModel())
     }
 }
