@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct PaymentAppApp: App {
+    
+    let cardViewModel = CardViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PaymentScreenView(cardViewModel: cardViewModel)
         }
     }
 }

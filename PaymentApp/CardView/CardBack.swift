@@ -1,5 +1,5 @@
 //
-//  CartBack.swift
+//  CardBack.swift
 //  PaymentApp
 //
 //  Created by Тимофей Лукашевич on 20.05.23.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct CartBack: View {
+struct CardBack: View {
     
-    @ObservedObject var viewModel: CartViewModel
+    @ObservedObject var viewModel: CardViewModel
     
     var body: some View {
         GeometryReader { proxy in
@@ -17,7 +17,7 @@ struct CartBack: View {
                 Spacer()
                 HStack {
                     Spacer(minLength: proxy.size.width * (2.0 / 3.0))
-                    FormattedTextField("CVV/CVV2", value: $viewModel.model.cvv, formater: CartCVVFormater())
+                    FormattedTextField("CVV/CVV2", value: $viewModel.cardModel.cvv, formater: CardCVVFormater())
                         .keyboardType(.numberPad)
                         .multilineTextAlignment(.center)
                         .padding(3)
@@ -31,9 +31,9 @@ struct CartBack: View {
     }
 }
 
-struct CartBack_Previews: PreviewProvider {
+struct CardBack_Previews: PreviewProvider {
     static var previews: some View {
-        CartBack(viewModel: CartViewModel())
+        CardBack(viewModel: CardViewModel())
             .background(.blue)
             .frame(width: 350, height: 230)
     }
