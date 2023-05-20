@@ -8,13 +8,33 @@
 import SwiftUI
 
 struct CartBack: View {
+    
+    @ObservedObject var viewModel: CartViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { proxy in
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer(minLength: proxy.size.width * (2.0 / 3.0))
+                    FormattedTextField("CVV/CVV2", value: $viewModel.model.cvv, formater: CartCVVFormater())
+                        .keyboardType(.numberPad)
+                        .multilineTextAlignment(.center)
+                        .padding(3)
+                        .background()
+                        .cornerRadius(5)
+                    Spacer(minLength: proxy.size.width / 15)
+                }
+                Spacer()
+            }
+        }
     }
 }
 
 struct CartBack_Previews: PreviewProvider {
     static var previews: some View {
-        CartBack()
+        CartBack(viewModel: CartViewModel())
+            .background(.blue)
+            .frame(width: 350, height: 230)
     }
 }

@@ -7,11 +7,6 @@
 
 import Foundation
 
-protocol SrtingFormater {
-    var format: String {get}
-    var replacementCharacter: Character {get}
-}
-
 extension String {
     func applyPattern(pattern: String, replacementCharacter: Character) -> String {
         var res = ""
@@ -35,9 +30,5 @@ extension String {
             
         }
         return res
-    }
-    
-    func applyPattern(formater: SrtingFormater) -> String {
-        applyPattern(pattern: formater.format, replacementCharacter: formater.replacementCharacter)
     }
 }

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+class CartViewModel: ObservableObject {
+    @Published var model = Cart()
+    
+}
