@@ -16,10 +16,7 @@ struct CardView: View {
     
     var body: some View {
         VStack {
-            Spacer()
-            
             cardView
-            
             Button {
                 withAnimation {
                     isCardFrontShown.toggle()
@@ -29,8 +26,6 @@ struct CardView: View {
                 Text(isCardFrontShown ? "Next" : "Back")
             }
             .padding(.top, 30)
-
-            Spacer()
         }
     }
     

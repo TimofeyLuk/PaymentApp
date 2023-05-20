@@ -9,15 +9,48 @@ import SwiftUI
 
 struct PaymentScreenView: View {
     
-    let cardViewModel = CardViewModel()
+    @ObservedObject var cardViewModel: CardViewModel
     
     var body: some View {
-        CardView(viewModel: cardViewModel)
+        VStack {
+            CardView(viewModel: cardViewModel)
+            if cardViewModel.isCardFilled, cardViewModel.validationErrors.isEmpty {
+                payButton
+            } else if !cardViewModel.validationErrors.isEmpty {
+                List($cardViewModel.validationErrors) { error in
+                    Text("\(error.wrappedValue.message)")
+                        .foregroundColor(.red)
+                }
+            }
+        }
     }
+        var payButton: some View {
+            
+            Button {
+                cardViewModel.pay()
+            } label: {
+                Text("Pay")
+                    .font(.title)
+                    .foregroundColor(.black)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 5)
+            }
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [.red, .blue]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .cornerRadius(10)
+            )
+            .padding()
+            
+        }
+        
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        PaymentScreenView()
+        PaymentScreenView(cardViewModel: CardViewModel())
     }
 }

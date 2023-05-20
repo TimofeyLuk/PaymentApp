@@ -17,7 +17,7 @@ struct CardBack: View {
                 Spacer()
                 HStack {
                     Spacer(minLength: proxy.size.width * (2.0 / 3.0))
-                    FormattedTextField("CVV/CVV2", value: $viewModel.model.cvv, formater: CardCVVFormater())
+                    FormattedTextField("CVV/CVV2", value: $viewModel.cardModel.cvv, formater: CardCVVFormater())
                         .keyboardType(.numberPad)
                         .multilineTextAlignment(.center)
                         .padding(3)

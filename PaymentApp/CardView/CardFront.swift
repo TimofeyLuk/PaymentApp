@@ -14,18 +14,27 @@ struct CardFront: View {
     var body: some View {
         GeometryReader { proxy in
             VStack(alignment: .leading) {
-                Spacer(minLength: proxy.size.height / 2.5)
-                field("Card Number", text: $viewModel.model.number, formater: CardNumberFormater())
-                    .keyboardType(.numberPad)
+                
                 HStack {
-                    field("MM/YY", text: $viewModel.model.expireDate, formater: CardExpireDateFormater())
+                    Spacer()
+                    Text(viewModel.type)
+                        .font(.title2)
+                }
+                .frame(minHeight:  proxy.size.height / 2.5)
+                
+                
+                field("Card Number", text: $viewModel.cardModel.number, formater: CardNumberFormater())
+                    .keyboardType(.numberPad)
+                
+                HStack {
+                    field("MM/YY", text: $viewModel.cardModel.expireDate, formater: CardExpireDateFormater())
                         .multilineTextAlignment(.center)
                         .keyboardType(.numberPad)
                         .frame(width: proxy.size.width / 4)
                     Spacer()
                 }
                     
-                field("NAME SURNAME", text: $viewModel.model.holdername, formater: CardHolderFormater())
+                field("NAME SURNAME", text: $viewModel.cardModel.holderName, formater: CardHolderFormater())
                 Spacer()
             }
             .padding(.horizontal)

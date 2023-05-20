@@ -29,12 +29,12 @@ final class CardExpireDateFormater: StringFormater {
 
 final class CardHolderFormater: StringFormater {
     func modify(_ str: String) -> String {
-        str.uppercased().replacingOccurrences(of: "[^A-Z ]", with: "", options: .regularExpression)
+        String(str.uppercased().replacingOccurrences(of: "[^A-Z ]", with: "", options: .regularExpression).prefix(24))
     }
 }
 
 final class CardCVVFormater: StringFormater {
     func modify(_ str: String) -> String {
-        String(str.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression).prefix(3))
+        String(str.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression).prefix(4))
     }
 }
