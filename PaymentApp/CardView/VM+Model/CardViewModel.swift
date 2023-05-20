@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class CardViewModel: ObservableObject {
+final class CardViewModel: ObservableObject {
     
     @Published var cardModel = Card()
     @Published var type = ""
@@ -38,12 +38,9 @@ class CardViewModel: ObservableObject {
         return type.lable
     }
     
-    func pay() {
-        validateCard()
-    }
-    
-    private func validateCard() {
+    func validateCard() -> Bool {
         validationErrors = cardValidator.validate(cardModel)
+        return validationErrors.isEmpty
     }
     
 }

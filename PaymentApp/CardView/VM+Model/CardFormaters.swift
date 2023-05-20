@@ -8,7 +8,7 @@
 import Foundation
 
 final class CardNumberFormater: StringFormater {
-    let format: String = "#### #### #### #### ####"
+    let format: String = "#### #### #### #### ###"
     let replacementCharacter: Character = "#"
     
     func modify(_ str: String) -> String {

@@ -16,6 +16,18 @@
 		438AC2952A19202100A8429B /* CreditCardNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC2942A19202100A8429B /* CreditCardNumberValidator.swift */; };
 		438AC2962A19202100A8429B /* CreditCardNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC2942A19202100A8429B /* CreditCardNumberValidator.swift */; };
 		438AC2972A19202100A8429B /* CreditCardNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC2942A19202100A8429B /* CreditCardNumberValidator.swift */; };
+		438AC2992A19375100A8429B /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC2982A19375100A8429B /* PaymentService.swift */; };
+		438AC29A2A19375100A8429B /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC2982A19375100A8429B /* PaymentService.swift */; };
+		438AC29B2A19375100A8429B /* PaymentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC2982A19375100A8429B /* PaymentService.swift */; };
+		438AC29E2A19385A00A8429B /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC29D2A19385A00A8429B /* NetworkMonitor.swift */; };
+		438AC29F2A19385A00A8429B /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC29D2A19385A00A8429B /* NetworkMonitor.swift */; };
+		438AC2A02A19385A00A8429B /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC29D2A19385A00A8429B /* NetworkMonitor.swift */; };
+		438AC2A82A193DF000A8429B /* PaymentProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC2A72A193DF000A8429B /* PaymentProcessView.swift */; };
+		438AC2A92A193DF000A8429B /* PaymentProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC2A72A193DF000A8429B /* PaymentProcessView.swift */; };
+		438AC2AA2A193DF000A8429B /* PaymentProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC2A72A193DF000A8429B /* PaymentProcessView.swift */; };
+		438AC2AC2A193EB300A8429B /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC2AB2A193EB300A8429B /* PaymentViewModel.swift */; };
+		438AC2AD2A193EB300A8429B /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC2AB2A193EB300A8429B /* PaymentViewModel.swift */; };
+		438AC2AE2A193EB300A8429B /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC2AB2A193EB300A8429B /* PaymentViewModel.swift */; };
 		43D9061A2A18E20A00EDC1AF /* PaymentAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D906192A18E20A00EDC1AF /* PaymentAppApp.swift */; };
 		43D9061C2A18E20A00EDC1AF /* PaymentScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9061B2A18E20A00EDC1AF /* PaymentScreenView.swift */; };
 		43D9061E2A18E20B00EDC1AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D9061D2A18E20B00EDC1AF /* Assets.xcassets */; };
@@ -71,6 +83,10 @@
 		438AC28B2A19129E00A8429B /* CardValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidator.swift; sourceTree = "<group>"; };
 		438AC28E2A19200300A8429B /* CreditCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardType.swift; sourceTree = "<group>"; };
 		438AC2942A19202100A8429B /* CreditCardNumberValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardNumberValidator.swift; sourceTree = "<group>"; };
+		438AC2982A19375100A8429B /* PaymentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentService.swift; sourceTree = "<group>"; };
+		438AC29D2A19385A00A8429B /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		438AC2A72A193DF000A8429B /* PaymentProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProcessView.swift; sourceTree = "<group>"; };
+		438AC2AB2A193EB300A8429B /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		43D906162A18E20A00EDC1AF /* PaymentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D906192A18E20A00EDC1AF /* PaymentAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAppApp.swift; sourceTree = "<group>"; };
 		43D9061B2A18E20A00EDC1AF /* PaymentScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentScreenView.swift; sourceTree = "<group>"; };
@@ -143,6 +159,25 @@
 			path = CardValidation;
 			sourceTree = "<group>";
 		};
+		438AC29C2A19384300A8429B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				438AC2982A19375100A8429B /* PaymentService.swift */,
+				438AC29D2A19385A00A8429B /* NetworkMonitor.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		438AC2A52A193DC500A8429B /* PaymentScreen */ = {
+			isa = PBXGroup;
+			children = (
+				43D9061B2A18E20A00EDC1AF /* PaymentScreenView.swift */,
+				438AC2A72A193DF000A8429B /* PaymentProcessView.swift */,
+				438AC2AB2A193EB300A8429B /* PaymentViewModel.swift */,
+			);
+			path = PaymentScreen;
+			sourceTree = "<group>";
+		};
 		43D9060D2A18E20A00EDC1AF = {
 			isa = PBXGroup;
 			children = (
@@ -166,10 +201,11 @@
 		43D906182A18E20A00EDC1AF /* PaymentApp */ = {
 			isa = PBXGroup;
 			children = (
-				438AC28A2A19128700A8429B /* Validation */,
 				43D906192A18E20A00EDC1AF /* PaymentAppApp.swift */,
-				43D9061B2A18E20A00EDC1AF /* PaymentScreenView.swift */,
+				438AC2A52A193DC500A8429B /* PaymentScreen */,
 				43D906432A18E38200EDC1AF /* CardView */,
+				438AC29C2A19384300A8429B /* Services */,
+				438AC28A2A19128700A8429B /* Validation */,
 				438AC2892A19125600A8429B /* CommonViews */,
 				43D9064C2A18EF1500EDC1AF /* Extensions */,
 				43D9061D2A18E20B00EDC1AF /* Assets.xcassets */,
@@ -378,11 +414,15 @@
 				43D906492A18EA6300EDC1AF /* CardFront.swift in Sources */,
 				43D9066B2A19091E00EDC1AF /* CardBack.swift in Sources */,
 				43D906582A18EFF800EDC1AF /* Card.swift in Sources */,
+				438AC29E2A19385A00A8429B /* NetworkMonitor.swift in Sources */,
 				438AC28F2A19200300A8429B /* CreditCardType.swift in Sources */,
 				43D9064E2A18EF3500EDC1AF /* StringExtension.swift in Sources */,
 				43D906672A19002300EDC1AF /* CardFormaters.swift in Sources */,
+				438AC2AC2A193EB300A8429B /* PaymentViewModel.swift in Sources */,
+				438AC2A82A193DF000A8429B /* PaymentProcessView.swift in Sources */,
 				43D906452A18E3B200EDC1AF /* CardView.swift in Sources */,
 				43D9061A2A18E20A00EDC1AF /* PaymentAppApp.swift in Sources */,
+				438AC2992A19375100A8429B /* PaymentService.swift in Sources */,
 				438AC28C2A19129E00A8429B /* CardValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,11 +438,15 @@
 				43D906592A18EFF800EDC1AF /* Card.swift in Sources */,
 				43D906542A18EFD000EDC1AF /* CardViewModel.swift in Sources */,
 				43D9066C2A19091E00EDC1AF /* CardBack.swift in Sources */,
+				438AC29F2A19385A00A8429B /* NetworkMonitor.swift in Sources */,
 				43D906462A18E3B200EDC1AF /* CardView.swift in Sources */,
 				43D9064A2A18EA6300EDC1AF /* CardFront.swift in Sources */,
 				43D906682A19002300EDC1AF /* CardFormaters.swift in Sources */,
+				438AC2AD2A193EB300A8429B /* PaymentViewModel.swift in Sources */,
+				438AC2A92A193DF000A8429B /* PaymentProcessView.swift in Sources */,
 				43D906612A18FAD600EDC1AF /* StringPaternTests.swift in Sources */,
 				438AC2902A19200300A8429B /* CreditCardType.swift in Sources */,
+				438AC29A2A19375100A8429B /* PaymentService.swift in Sources */,
 				43D9062B2A18E20B00EDC1AF /* PaymentAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,11 +462,15 @@
 				43D9065F2A18F36600EDC1AF /* FormattedTextField.swift in Sources */,
 				43D9064B2A18EA6300EDC1AF /* CardFront.swift in Sources */,
 				43D9066D2A19091E00EDC1AF /* CardBack.swift in Sources */,
+				438AC2A02A19385A00A8429B /* NetworkMonitor.swift in Sources */,
 				43D9065A2A18EFF800EDC1AF /* Card.swift in Sources */,
 				43D906502A18EF3500EDC1AF /* StringExtension.swift in Sources */,
 				43D906692A19002300EDC1AF /* CardFormaters.swift in Sources */,
+				438AC2AE2A193EB300A8429B /* PaymentViewModel.swift in Sources */,
+				438AC2AA2A193DF000A8429B /* PaymentProcessView.swift in Sources */,
 				43D906472A18E3B200EDC1AF /* CardView.swift in Sources */,
 				438AC2912A19200300A8429B /* CreditCardType.swift in Sources */,
+				438AC29B2A19375100A8429B /* PaymentService.swift in Sources */,
 				43D906372A18E20B00EDC1AF /* PaymentAppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
