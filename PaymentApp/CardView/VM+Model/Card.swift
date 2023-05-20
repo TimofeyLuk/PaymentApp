@@ -14,7 +14,7 @@ struct Card {
     var cvv: String = ""
     
     var isCardFilled: Bool {
-        let isNumberFilled = number.count >= 12
+        let isNumberFilled = number.count >= 13 && number.count <= 19
         let iHoldernameFilled = !holderName.isEmpty
         let isExpireDateFilled = expireDate.count == 5
         let isCVVFilled = cvv.count >= 3
