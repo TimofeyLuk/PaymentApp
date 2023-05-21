@@ -21,20 +21,24 @@ struct CardFront: View {
                         .font(.title2)
                 }
                 .frame(minHeight:  proxy.size.height / 2.5)
+                .accessibilityIdentifier("CardTypeLable")
                 
                 
                 field("Card Number", text: $viewModel.cardModel.number, formater: CardNumberFormater())
                     .keyboardType(.numberPad)
+                    .accessibilityIdentifier("CardNumberField")
                 
                 HStack {
                     field("MM/YY", text: $viewModel.cardModel.expireDate, formater: CardExpireDateFormater())
                         .multilineTextAlignment(.center)
                         .keyboardType(.numberPad)
                         .frame(width: proxy.size.width / 4)
+                        .accessibilityIdentifier("CardExpireDateField")
                     Spacer()
                 }
                     
                 field("NAME SURNAME", text: $viewModel.cardModel.holderName, formater: CardHolderFormater())
+                    .accessibilityIdentifier("CardHolderNameField")
                 Spacer()
             }
             .padding(.horizontal)

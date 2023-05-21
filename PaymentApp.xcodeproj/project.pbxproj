@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4336DFAD2A1A289300210177 /* CrardValidationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4336DFAC2A1A289300210177 /* CrardValidationTest.swift */; };
 		438AC28C2A19129E00A8429B /* CardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC28B2A19129E00A8429B /* CardValidator.swift */; };
 		438AC28F2A19200300A8429B /* CreditCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC28E2A19200300A8429B /* CreditCardType.swift */; };
 		438AC2902A19200300A8429B /* CreditCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC28E2A19200300A8429B /* CreditCardType.swift */; };
@@ -32,8 +33,7 @@
 		43D9061C2A18E20A00EDC1AF /* PaymentScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9061B2A18E20A00EDC1AF /* PaymentScreenView.swift */; };
 		43D9061E2A18E20B00EDC1AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D9061D2A18E20B00EDC1AF /* Assets.xcassets */; };
 		43D906212A18E20B00EDC1AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43D906202A18E20B00EDC1AF /* Preview Assets.xcassets */; };
-		43D9062B2A18E20B00EDC1AF /* PaymentAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D9062A2A18E20B00EDC1AF /* PaymentAppTests.swift */; };
-		43D906352A18E20B00EDC1AF /* PaymentAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D906342A18E20B00EDC1AF /* PaymentAppUITests.swift */; };
+		43D906352A18E20B00EDC1AF /* CardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D906342A18E20B00EDC1AF /* CardUITests.swift */; };
 		43D906372A18E20B00EDC1AF /* PaymentAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D906362A18E20B00EDC1AF /* PaymentAppUITestsLaunchTests.swift */; };
 		43D906452A18E3B200EDC1AF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D906442A18E3B200EDC1AF /* CardView.swift */; };
 		43D906462A18E3B200EDC1AF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D906442A18E3B200EDC1AF /* CardView.swift */; };
@@ -80,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4336DFAC2A1A289300210177 /* CrardValidationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrardValidationTest.swift; sourceTree = "<group>"; };
 		438AC28B2A19129E00A8429B /* CardValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidator.swift; sourceTree = "<group>"; };
 		438AC28E2A19200300A8429B /* CreditCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardType.swift; sourceTree = "<group>"; };
 		438AC2942A19202100A8429B /* CreditCardNumberValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardNumberValidator.swift; sourceTree = "<group>"; };
@@ -93,9 +94,8 @@
 		43D9061D2A18E20B00EDC1AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43D906202A18E20B00EDC1AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		43D906262A18E20B00EDC1AF /* PaymentAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		43D9062A2A18E20B00EDC1AF /* PaymentAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAppTests.swift; sourceTree = "<group>"; };
 		43D906302A18E20B00EDC1AF /* PaymentAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		43D906342A18E20B00EDC1AF /* PaymentAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAppUITests.swift; sourceTree = "<group>"; };
+		43D906342A18E20B00EDC1AF /* CardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUITests.swift; sourceTree = "<group>"; };
 		43D906362A18E20B00EDC1AF /* PaymentAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		43D906442A18E3B200EDC1AF /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		43D906482A18EA6300EDC1AF /* CardFront.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFront.swift; sourceTree = "<group>"; };
@@ -225,8 +225,8 @@
 		43D906292A18E20B00EDC1AF /* PaymentAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				43D9062A2A18E20B00EDC1AF /* PaymentAppTests.swift */,
 				43D906602A18FAD600EDC1AF /* StringPaternTests.swift */,
+				4336DFAC2A1A289300210177 /* CrardValidationTest.swift */,
 			);
 			path = PaymentAppTests;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 		43D906332A18E20B00EDC1AF /* PaymentAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				43D906342A18E20B00EDC1AF /* PaymentAppUITests.swift */,
+				43D906342A18E20B00EDC1AF /* CardUITests.swift */,
 				43D906362A18E20B00EDC1AF /* PaymentAppUITestsLaunchTests.swift */,
 			);
 			path = PaymentAppUITests;
@@ -447,7 +447,7 @@
 				43D906612A18FAD600EDC1AF /* StringPaternTests.swift in Sources */,
 				438AC2902A19200300A8429B /* CreditCardType.swift in Sources */,
 				438AC29A2A19375100A8429B /* PaymentService.swift in Sources */,
-				43D9062B2A18E20B00EDC1AF /* PaymentAppTests.swift in Sources */,
+				4336DFAD2A1A289300210177 /* CrardValidationTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +457,7 @@
 			files = (
 				43D906552A18EFD000EDC1AF /* CardViewModel.swift in Sources */,
 				438AC2972A19202100A8429B /* CreditCardNumberValidator.swift in Sources */,
-				43D906352A18E20B00EDC1AF /* PaymentAppUITests.swift in Sources */,
+				43D906352A18E20B00EDC1AF /* CardUITests.swift in Sources */,
 				438AC2922A19201B00A8429B /* CardValidator.swift in Sources */,
 				43D9065F2A18F36600EDC1AF /* FormattedTextField.swift in Sources */,
 				43D9064B2A18EA6300EDC1AF /* CardFront.swift in Sources */,

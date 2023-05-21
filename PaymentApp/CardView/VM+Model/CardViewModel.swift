@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class CardViewModel: ObservableObject {
+class CardViewModel: ObservableObject {
     
     @Published var cardModel = Card()
     @Published var type = ""

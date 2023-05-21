@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PaymentScreenView: View {
     
-    @ObservedObject var cardViewModel: CardViewModel
     @ObservedObject var paymentViewModel: PaymentViewModel
     
     var body: some View {
@@ -23,12 +22,13 @@ struct PaymentScreenView: View {
     
     var fillCardView: some View {
         VStack {
-            CardView(viewModel: cardViewModel)
-            if cardViewModel.isCardFilled, cardViewModel.validationErrors.isEmpty {
+            CardView(viewModel: paymentViewModel)
+            if paymentViewModel.isCardFilled, paymentViewModel.validationErrors.isEmpty {
                 payButton
-            } else if !cardViewModel.validationErrors.isEmpty {
-                List($cardViewModel.validationErrors) { error in
+            } else if !paymentViewModel.validationErrors.isEmpty {
+                List($paymentViewModel.validationErrors) { error in
                     Text("\(error.wrappedValue.message)")
+                        .accessibilityIdentifier("CardValidationError\(error.id)")
                         .foregroundColor(.red)
                 }
             }
@@ -37,9 +37,7 @@ struct PaymentScreenView: View {
     
     var payButton: some View {
         Button {
-            if cardViewModel.validateCard() {
-                paymentViewModel.pay(withCard: cardViewModel.cardModel)
-            }
+            paymentViewModel.pay(withCard: paymentViewModel.cardModel)
         } label: {
             Text("Pay")
                 .font(.title)
@@ -47,6 +45,7 @@ struct PaymentScreenView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 5)
         }
+        .accessibilityIdentifier("PaymentButton")
         .background(
             LinearGradient(
                 gradient: Gradient(colors: [.red, .blue]),
@@ -64,7 +63,6 @@ struct PaymentScreenView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         PaymentScreenView(
-            cardViewModel: CardViewModel(),
             paymentViewModel: PaymentViewModel()
         )
     }
