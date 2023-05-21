@@ -11,13 +11,16 @@ enum PaymentStatus {
     case inProgress, success, fail, closed
 }
 
-final class PaymentViewModel: ObservableObject {
+final class PaymentViewModel: CardViewModel {
     @Published var paymentStatus: PaymentStatus = .closed
     @Published var paymentError: PaymentError?
     
     private let paymentService = PaymentService()
     
     func pay(withCard card: Card) {
+        
+        guard validateCard() else { return }
+        
         paymentStatus = .inProgress
         Task { [weak self] in
             do {

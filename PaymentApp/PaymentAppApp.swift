@@ -19,12 +19,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct PaymentAppApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    let cardViewModel = CardViewModel()
     let paymentViewModel = PaymentViewModel()
     
     var body: some Scene {
         WindowGroup {
-            PaymentScreenView(cardViewModel: cardViewModel, paymentViewModel: paymentViewModel)
+            PaymentScreenView(paymentViewModel: paymentViewModel)
         }
     }
 }

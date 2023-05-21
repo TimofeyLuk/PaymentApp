@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4336DFAD2A1A289300210177 /* CrardValidationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4336DFAC2A1A289300210177 /* CrardValidationTest.swift */; };
 		438AC28C2A19129E00A8429B /* CardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC28B2A19129E00A8429B /* CardValidator.swift */; };
 		438AC28F2A19200300A8429B /* CreditCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC28E2A19200300A8429B /* CreditCardType.swift */; };
 		438AC2902A19200300A8429B /* CreditCardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438AC28E2A19200300A8429B /* CreditCardType.swift */; };
@@ -80,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4336DFAC2A1A289300210177 /* CrardValidationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrardValidationTest.swift; sourceTree = "<group>"; };
 		438AC28B2A19129E00A8429B /* CardValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidator.swift; sourceTree = "<group>"; };
 		438AC28E2A19200300A8429B /* CreditCardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardType.swift; sourceTree = "<group>"; };
 		438AC2942A19202100A8429B /* CreditCardNumberValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardNumberValidator.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				43D9062A2A18E20B00EDC1AF /* PaymentAppTests.swift */,
 				43D906602A18FAD600EDC1AF /* StringPaternTests.swift */,
+				4336DFAC2A1A289300210177 /* CrardValidationTest.swift */,
 			);
 			path = PaymentAppTests;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				438AC2902A19200300A8429B /* CreditCardType.swift in Sources */,
 				438AC29A2A19375100A8429B /* PaymentService.swift in Sources */,
 				43D9062B2A18E20B00EDC1AF /* PaymentAppTests.swift in Sources */,
+				4336DFAD2A1A289300210177 /* CrardValidationTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
