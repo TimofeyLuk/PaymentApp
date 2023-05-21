@@ -10,7 +10,13 @@ import Combine
 
 class CardViewModel: ObservableObject {
     
-    @Published var cardModel = Card()
+    @Published var cardModel: Card {
+        didSet {
+            validationErrors = []
+            isCardFilled = cardModel.isCardFilled
+            type = getType(forCardNumber: cardModel.number) ?? ""
+        }
+    }
     @Published var type = ""
     @Published var validationErrors = [CardValidationError]()
     @Published var isCardFilled = false
@@ -21,14 +27,6 @@ class CardViewModel: ObservableObject {
     
     init(model: Card = Card()) {
         self.cardModel = model
-        cardNumberSubsribtion =  _cardModel.projectedValue
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] card in
-                self?.validationErrors = []
-                self?.isCardFilled = card.isCardFilled
-                self?.type = self?.getType(forCardNumber: card.number) ?? ""
-            }
-            
     }
     
     private func getType(forCardNumber cardNumber: String) -> String? {
