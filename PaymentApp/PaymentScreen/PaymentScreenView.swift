@@ -28,6 +28,7 @@ struct PaymentScreenView: View {
             } else if !paymentViewModel.validationErrors.isEmpty {
                 List($paymentViewModel.validationErrors) { error in
                     Text("\(error.wrappedValue.message)")
+                        .accessibilityIdentifier("CardValidationError\(error.id)")
                         .foregroundColor(.red)
                 }
             }
@@ -44,6 +45,7 @@ struct PaymentScreenView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 5)
         }
+        .accessibilityIdentifier("PaymentButton")
         .background(
             LinearGradient(
                 gradient: Gradient(colors: [.red, .blue]),

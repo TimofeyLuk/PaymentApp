@@ -25,6 +25,7 @@ struct CardView: View {
             } label: {
                 Text(isCardFrontShown ? "Next" : "Back")
             }
+            .accessibilityIdentifier("FlipCardButton")
             .padding(.top, 30)
         }
     }

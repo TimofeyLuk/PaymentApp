@@ -23,6 +23,7 @@ struct CardBack: View {
                         .padding(3)
                         .background()
                         .cornerRadius(5)
+                        .accessibilityIdentifier("CardCVVField")
                     Spacer(minLength: proxy.size.width / 15)
                 }
                 Spacer()
