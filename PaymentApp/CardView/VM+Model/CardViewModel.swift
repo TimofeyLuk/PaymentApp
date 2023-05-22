@@ -21,7 +21,6 @@ class CardViewModel: ObservableObject {
     @Published var validationErrors = [CardValidationError]()
     @Published var isCardFilled = false
     
-    private var cardNumberSubsribtion: AnyCancellable?
     private var cardValidator = CardValidator()
     
     
